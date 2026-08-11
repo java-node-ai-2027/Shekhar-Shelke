@@ -1,0 +1,12 @@
+.header {
+    color:rgb(146, 252, 110);
+    cursor:pointer;
+    
+}
+#para{
+    color: rgb(237, 101, 101);  
+    background-color: yellow;
+}
+a{
+    text-decoration: none;
+}
