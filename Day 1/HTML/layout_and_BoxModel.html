@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, itial-scale=1.0" />
+    <title>layout practice</title>
+
+    <style>
+      .model {
+        background-color: red;
+        height: 250px;
+        width: 250px;
+        border: 2px solid black;
+        margin: 20px;
+        padding: 20px;
+      }
+      .parent {
+        display: flex;
+        justify-content: center;
+      }
+      .box {
+        box-sizing: border-box;
+        width: 200px;
+        padding: 20px;
+        border: 5px solid black;
+        position: sticky;
+        top: 20px;
+      }
+      .parent1 {
+        width: 400px;
+        height: 300px;
+        border: 2px solid black;
+
+        position: relative;
+      }
+
+      .child {
+        width: 100px;
+        height: 100px;
+        border: 2px solid green;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <header>
+      <h1>Thinkitive website</h1>
+    </header>
+    <nav>
+      <li class="list">home</li>
+      <li class="list">abouts</li>
+      <li class="list">service</li>
+      <li class="list">contact</li>
+    </nav>
+    <main>
+      <section>
+        <h2>about me</h2>
+      </section>
+
+      <section>
+        <h2>My skills</h2>
+        <article>
+          <h2>Html,css,javascript and react</h2>
+          <p>react component pros,hooks</p>
+        </article>
+        <article>
+          <h2>Java</h2>
+          <p>java fundamental</p>
+        </article>
+      </section>
+      
+    </main>
+     <div class="box"> <b>sticky example</b></div>
+    <footer>
+      <p>© 2026 Shekhar Shelke</p>
+    </footer>
+    <h2>Box Model with flex properties</h2>
+    <div class="parent">
+      <div class="model"></div>
+      <div class="model"></div>
+      <div class="model"></div>
+    </div>
+
+    <div class="box"></div>
+
+    <div class="parent1">
+      <div class="child">Child</div>
+    </div>
+
+    <a href="#" target="_blank"><button>go to the table page</button></a>
+  </body>
+</html>
