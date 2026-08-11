@@ -26,7 +26,17 @@
         position: sticky;
         top: 20px;
       }
-      .parent1 {
+
+.box1 {
+        box-sizing: border-box;
+        width: 200px;
+        padding: 20px;
+        border: 5px solid black;
+        position: fixed;
+        top: 435px;
+        background-color: blanchedalmond;
+      }   
+         .parent1 {
         width: 400px;
         height: 300px;
         border: 2px solid black;
@@ -84,12 +94,12 @@
       <div class="model"></div>
     </div>
 
-    <div class="box"></div>
+    <div class="box1"> <b>Fixed box</b> </div>
 
     <div class="parent1">
       <div class="child">Child</div>
     </div>
 
-    <a href="#" target="_blank"><button>go to the table page</button></a>
+    <a href="../HTML/grid_and_flex.html" target="_blank"><button>go to the table page</button></a>
   </body>
 </html>
