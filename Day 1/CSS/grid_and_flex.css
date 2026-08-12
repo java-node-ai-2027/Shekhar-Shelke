@@ -27,18 +27,19 @@
     color: brown;
     margin: 2px;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     background-color: rgb(160, 251, 69); 
 }
 .container1{
     display: flex;
-    justify-content: space-around;
+    justify-content:right;
     flex-direction: row-reverse ;
-    align-items: center;
+    align-items:start;
     border: 3px solid gold;
     height: 300px;
     /* flex-wrap: wrap-reverse;     */
+    
     
 }
 
