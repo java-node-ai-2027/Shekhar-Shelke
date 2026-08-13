@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type of css</title>
+    <link rel="stylesheet" href="../CSS/type_of_css.css" />
+    <style>
+      .para {
+        color: aqua;
+        font-size: 20px;
+        background-color: blue;
+      }
+
+      .para::after {
+        content: "Hello";
+        color: pink;
+      }
+      .para::before {
+        content: "look ";
+        color: rgb(255, 0, 0);
+      }
+      #text {
+        color: rgb(255, 239, 12);
+      }
+      .sample {
+        font-size: 1em;
+      }
+
+      .parent {
+        font-size: 20px;
+        border: 2px solid rgb(0, 0, 0);
+        width: 50%;
+      }
+      #text1 {
+        font-size: 2em;
+      }
+      #text2 {
+        font-size: 2rem;
+      }
+      #text3 {
+        font-size: 3rem;
+        border: 2px solid red;
+        margin: 2px;
+        width: 50vw;
+      }
+       .box{
+        height: 100px;
+        width: 100px;
+        border: 4px solid green;
+        margin-top: 20px;
+        display: flex;
+        outline: 3px solid red;
+        outline-offset: 5px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+      }
+      .box1{
+        height: 100px;
+        width: 100px;
+        border: 114px solid green;
+        margin-top: 20px;
+        display: flex;
+        /* outline: 3px solid red; */
+        outline-offset: 5px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+      }
+      .box2{
+        height: 100px;
+        width: 100px;
+        /* border: 114px solid green; */
+        margin-top: 20px;
+        display: flex;
+        outline: 113px solid red;
+        outline-offset: 5px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+      }
+      .headingText{
+        font-size: 45px;
+        color: rgb(12, 112, 226);
+        margin-top: 20px;
+        margin-bottom: 155px;
+      }
+      .comman{
+        margin-right: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <p style="color: red; background-color: yellow">
+      Hello World.... this content apply css through the inline CSS
+    </p>
+    <p class="para">
+      Hello world... this content apply css through the Internal CSS
+    </p>
+    <p id="text" class="text">
+      Hello World... this content apply css through the extralnal CSS
+    </p>
+    <div class="parent">
+      <div class="sample">Css Unit <---- (Parent)</div>
+      <div id="text1">sample text <---- 2em</div>
+      <div id="text2">sample Text <---- 2rem</div>
+      <div id="text3">sample text <---- 3em</div>
+    </div>
+   <div class="headingText"> sample of outline and border </div>
+   <div style="display: flex;">
+   <div class="box comman">
+      simple 
+    </div>
+    
+
+    <div class="box2 comman ">
+      outline
+    </div>
+    <div class="box1 comman">
+      border
+    </div>
+    </div>
+    <a href="../HTML/text_effect.html"> <button >Go to the text efftect and more page </button></a>
+  </body>
+</html>

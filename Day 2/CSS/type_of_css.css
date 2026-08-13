@@ -1,0 +1,10 @@
+#text{
+    font-size: 40px;
+    font-weight:500;
+    font-style: oblique;
+    color: rgb(48, 0, 110) ;
+}
+.text{
+    color: rgb(65, 0, 0);
+    background-color: red;
+}
