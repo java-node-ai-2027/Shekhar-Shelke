@@ -1,0 +1,35 @@
+button{
+    /* appearance: none; */
+    background-color: yellow;
+}
+
+label{
+    color: rgb(13, 168, 13);
+    /* user-select: none; */
+    user-select:none;
+}
+textarea{
+    resize: none;
+    /* resize: horizontal; */
+    /* resize: vertical; */
+    /* resize: both; */
+}
+
+.btn{
+    background-color: red;
+    color: darkblue;
+    pointer-events:visiblePainted;
+}
+input [type="checkbox"]{
+   accent-color: green;
+}
+
+input password{
+    color: red;
+    background-color: pink;
+
+}
+.password:hover{
+    color: red;
+    cursor:pointer;
+}
