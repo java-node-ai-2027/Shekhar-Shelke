@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .article {
+        column-count: 4;
+        column-gap: 35px;
+        column-rule: 2px solid gray;
+        /* break-inside: avoid; */
+      }
+
+      .article h2 {
+        break-inside: avoid;
+        column-span: all;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <h2>CSS Multicolumns</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis et
+        assumenda, porro placeat aliquid cum error, aspernatur expedita
+        voluptates sit iusto, possimus dicta autem delectus. Dolor tenetur
+        aspernatur suscipit necessitatibus?
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis asperiores porro est.
+      </p>
+    </div>
+  </body>
+</html>

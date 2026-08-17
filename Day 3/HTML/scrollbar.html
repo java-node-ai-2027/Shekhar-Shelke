@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scrollbar and visibility</title>
+    <link rel="stylesheet" href="../CSS/scrollbar.css" />
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sequi
+      repellat itaque autem! Facere voluptas fugiat, deleniti suscipit aliquam
+      dolore fuga id deserunt praesentium, magnam, est illo soluta omnis
+      molestias vitae? Sapiente. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Pariatur necessitatibus amet autem in dolorem. Aut,
+      perspiciatis. Ad placeat dolorum porro perspiciatis numquam accusamus?
+    </div>
+    <div class="">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+      itaque dolorem, deleniti deserunt voluptatibus, cum incidunt veritatis
+      alias cumque ea ratione? Exercitationem explicabo, dolorum pariatur itaque
+      asperiores autem, modi porro architecto accusamus laboriosam non ab,
+      impedit nemo eaque fugiat soluta.
+    </div>
+
+    <h2>graphics</h2>
+    <h3>Canvas</h3>
+    <canvas
+      id="canav"
+      width="500px"
+      height="500px"
+      style="border: 3px solid black"
+    ></canvas>
+
+    <h2>SVG</h2>
+    <svg width="200" height="100">
+      <rect width="100" height="90" x="100" y="70" fill="green" />
+      <rect width="100" height="150" x="100" y="70"  fill="green" />
+    </svg>
+
+    <h2>Media </h2>
+    <img src="../sample_Image.jpeg" width="200px" height="100px" alt="">
+    <audio controls>
+        <source src="#" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      ctx.fillStyle = "red";
+      ctx.fillRect(50, 20, 100, 50);
+    </script>
+  </body>
+</html>
