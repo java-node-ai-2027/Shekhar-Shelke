@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        #hello{
+                color: rebeccapurple;
+        }
+        .hello{
+            color: blue;
+
+        }
+        textarea{
+            background-color: rgb(189, 231, 231);
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    
+    <textarea name="" id=""></textarea>
+    <script>
+        const div=document.createElement("div")
+        div.textContent="Hello"
+        div.classList.add("hello")
+        div.id="hello"
+        div.style.color="red"
+        document.body.appendChild(div)
+
+        let h1=document.createElement("h1")
+        h1.textContent="Shekhar"
+        div.appendChild(h1)
+        console.log(h1.textContent)
+
+        const textarea=document.createElement("textarea")
+        textarea.style.scale="none"
+
+        document.body.appendChild(textarea)
+
+
+        
+    </script>
+</body>
+
+
+</html>
