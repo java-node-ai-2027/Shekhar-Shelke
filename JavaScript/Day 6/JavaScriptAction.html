@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Action</title>
+  </head>
+  <body>
+    <button id="btn">Click here</button>
+    <button id="btn1">double Click here</button>
+    <input type="text" id="username" />
+
+    <script>
+      const button = document.getElementById("btn");
+      const btn = document.getElementById("btn1");
+      const input = document.getElementById("username");
+
+      let count = 1;
+      //// named function
+
+      // button.addEventListener("click",test)
+      // function test(){
+      //     console.log(`clicked..${count}`)
+      //     count++;
+      // }
+
+      // button.addEventListener("click",function test(){
+      //     console.log(`clicked..${count}`)
+      //     count++;
+      // })
+      button.addEventListener("click", function test() {
+        console.log(`clicked..${count}`);
+        count++;
+      });
+
+    //   btn.addEventListener("mouseenter", () => {
+    //     console.log("mouse clicked");
+    //   });
+
+    //   btn.addEventListener("mouseleave", () => {
+    //     console.log("Mouse left");
+    //   });
+
+    //   input.addEventListener("keydown", () => {
+    //     console.log("Key pressed");
+    //   });
+    //   input.addEventListener("keyup", () => {
+    //     console.log("Key released");
+    //   });
+
+      input.addEventListener("input", (event) => {
+        console.log(event.target.value);
+      });
+    </script>
+  </body>
+</html>
