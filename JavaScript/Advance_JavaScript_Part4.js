@@ -1,44 +1,44 @@
-// console.log("Hello")
-//  let a=10;
-// function outer(){
+console.log("Hello")
+ let a=10;
+function outer(){
    
    
-//     function inner(){
+    function inner(){
 
-//         return ++a;
-//     }
-//     return inner;
-// }
+        return ++a;
+    }
+    return inner;
+}
 
-// const obj=outer();
-// console.log(obj());
-// console.log(obj());
-// console.log(obj())
+const obj=outer();
+console.log(obj());
+console.log(obj());
+console.log(obj())
 
-// let name="Shekhar"
+let name="Shekhar"
 
-// function changeName(value){
-//     value="Rahul"
+function changeName(value){
+    value="Rahul"
     
-// }
+}
 
-// // console.log(changeName(name))
+// console.log(changeName(name))
 // console.log(name)
 
-// const users={
-//     name:"mahesh"
-// }
+const users={
+    name:"mahesh"
+}
 
-// function chnageUser(obj){
-//     obj.name="Rohan"
-// };
+function chnageUser(obj){
+    obj.name="Rohan"
+};
 
-// chnageUser(users)
+chnageUser(users)
 
-// console.log(users)
-// console.log(users.name)
+console.log(users)
+console.log(users.name)
 
-//// 
+
 
 function createBankAccount(){
     let balance=10000;
