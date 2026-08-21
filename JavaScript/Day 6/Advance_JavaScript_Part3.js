@@ -1,35 +1,35 @@
-// // console.log(BigInt(Number.MAX_SAFE_INTEGER)+5n)
-// // console.log(Number.MIN_SAFE_INTEGER)
+console.log(BigInt(Number.MAX_SAFE_INTEGER)+5n)
+console.log(Number.MIN_SAFE_INTEGER)
 
 
-// console.log("We are learn About the Map")
+console.log("We are learn About the Map")
 
-// const student=new Map();
-// console.log(student)
+const student=new Map();
+console.log(student)
 
-// student.set("name","Shekhar")
-// student.set("age",22)
-// student.set("age",12) // update the value 
-// console.log(student.get("age"))
-// // it check key is exist or not 
-// console.log(student.has("name1"))
-// student.set("city","Pune")
-// console.log(student.delete("name"))
-// console.log(student)
-// student.clear();
+student.set("name","Shekhar")
+student.set("age",22)
+student.set("age",12) // update the value 
+console.log(student.get("age"))
+// it check key is exist or not 
+console.log(student.has("name1"))
+student.set("city","Pune")
+console.log(student.delete("name"))
+console.log(student)
+student.clear();
 
-// console.log(student)
+console.log(student)
 
 // let a=10;
-// let b=a;
-// a=20;
-// b=11;
-// console.log("a=",a,"b=",b)
+let b=a;
+a=20;
+b=11;
+console.log("a=",a,"b=",b)
 
-let student={
-    name:"",
-    age:10
-}
+// let student={
+//     name:"",
+//     age:10
+// }
 
 console.log(Object.keys(student).length)
 let num=Object.keys(student).length
