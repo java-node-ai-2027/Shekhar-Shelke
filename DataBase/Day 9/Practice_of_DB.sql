@@ -1,3 +1,5 @@
+
+
 CREATE DATABASE thinkitive_DB;
 DROP DATABASE thinkitive_DB;
 
@@ -116,7 +118,7 @@ select * from students
 ORDER BY age DESC;
 
 SELECT  DISTINCT age,* from students;
-
+select * from student;
 SELECT COUNT(*) from students;
 SELECT AVG(age) from students;
 SELECT sum(course_id) from students;
@@ -246,5 +248,67 @@ select * from accounts;
 
 ROLLBACK;
 
+CREATE TABLE foundation (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT CHECK (age >= 18)
+);
+
+INSERT INTO foundation (name, age)
+VALUES ('Shekhar', 23);
+
+INSERT INTO students (name, age)
+VALUES ('Rahul', 15);
+
+-- Output take error
+
+-- ERROR:  null value in column "id" of relation "students" violates not-null constraint
+-- Failing row contains (null, Shekhar, null, 23, f). 
+
+-- SQL state: 23502
+-- Detail: Failing row contains (null, Shekhar, null, 23, f).
+
+
+ALTER TABLE students
+ADD COLUMN email VARCHAR(100);
+
+ALTER TABLE students
+RENAME COLUMN name TO full_name;
+
+
+ALTER TABLE students
+ALTER COLUMN age TYPE BIGINT;
+
+ALTER TABLE students
+ADD CONSTRAINT age_check
+CHECK (age >= 18);
+
+SELECT *
+FROM students
+WHERE course_id IN (
+    SELECT id
+    FROM courses
+    WHERE course_name = 'java'
+);
+
+SELECT *
+FROM students
+WHERE course_id IN (
+    SELECT id
+    FROM courses
+    WHERE course_name IN ('java','python')
+);
+
+SELECT *
+FROM courses c
+WHERE EXISTS (
+    SELECT 1
+    FROM students s
+    WHERE s.course_id = c.id
+);
+
+select * from courses c
+
+select * from courses;
 
 
