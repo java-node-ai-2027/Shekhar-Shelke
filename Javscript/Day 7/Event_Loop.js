@@ -269,46 +269,48 @@ console.log(num.toLocaleString());
 
 // console.log(Math.abs(a-b)<Number.EPSILON)
 
-function login(callback) {
-  setTimeout(() => {
-    console.log("login successfully....");
-    callback({ id: 1, name: "shekhar" });
-    console.log("Hello");
-  }, 2000);
-}
-function getUser(user, callback) {
-  setTimeout(() => {
-    console.log("user info : ", user.name);
-    callback(user.id);
-  }, 2000);
-}
-function getPost(id, callback) {
-  setTimeout(() => {
-    console.log(id, "load post ");
-    callback(id);
-  }, 2000);
-}
 
-function comments(id) {
-  setTimeout(() => {
-    console.log(id, "Comment loaded");
-  }, 2000);
+
+function login(callback){
+        setTimeout(()=>{
+            console.log("login successfully....")
+            callback({id:1,name:"shekhar"});
+            console.log("Hello")
+        },2000)
+}
+function getUser(user,callback){
+        setTimeout(()=>{
+            console.log("user info : ",user.name)
+            callback(user.id);
+        },2000)
+}
+function getPost(id,callback){
+        setTimeout(()=>{
+            console.log(id,"load post ")
+            callback(id);
+        },2000)
 }
 
-login((user) => {
-  getUser(user, (id) => {
-    getPost(id, (id) => {
-      comments(id);
-    });
-  });
-});
+function comments(id){
+    setTimeout(()=>{
+        console.log(id,"Comment loaded")
+    },2000)
+}
 
-async function fetchAPI() {
-  const responce = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+login((user)=>{
+    getUser(user,(id)=>{
+        getPost(id,(id)=>{
+                comments(id);
+        })
+    })
+})
 
-  const data = await responce.json();
 
-  return data;
+async function fetchAPI(){
+    
+    const responce=await fetch("https://jsonplaceholder.typicode.com/posts/1");
+
+    const data=await responce.json();
 }
 
 async function getData() {
@@ -328,7 +330,6 @@ fetchApi()
   .then((data) => {
     console.log(data);
   })
-  .catch((error) => console.log(error));
 
 console.log("A");
 const promise = new Promise((resolve) => {
