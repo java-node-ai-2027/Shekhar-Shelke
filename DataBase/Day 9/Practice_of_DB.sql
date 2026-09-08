@@ -104,5 +104,147 @@ SELECT * FROM students
 where name LIKE 's%' and name LIKE '%r';
 
 select * from students
-where age=17 or age=25;
+where age=16 or age=25 or age=28;
+
+select * from students 
+where age>=22 OR name='aditya';
+
+select * from students 
+where course_id IN (1,2);
+
+select * from students
+ORDER BY age DESC;
+
+SELECT  DISTINCT age,* from students;
+
+SELECT COUNT(*) from students;
+SELECT AVG(age) from students;
+SELECT sum(course_id) from students;
+SELECT min(age) from students;
+SELECT max(age) from students;
+
+select course_id, count(*) from students
+GROUP BY course_id
+ORDER BY course_id;
+
+select age from students
+GROUP BY age
+HAVING COUNT(*)<2;
+
+INSERT INTO courses 
+values (5,'data analatics');
+
+select * from students
+order by id;
+
+
+INSERT INTO students (id, name, age, isactive)
+VALUES (31, 'kiko',43, true);
+
+delete from courses
+where id=4;
+
+select * from courses;
+
+INSERT INTO students (id, name, course_id, age, isactive)
+VALUES
+(10, 'Rahul Patil', 2, 12, true),
+(11, 'Priya Deshmukh', 3, 15, false),
+(12, 'Sneha Kulkarni', 1, 18, true),
+(13, 'Rohit Jadhav', 2, 20, false),
+(14, 'Neha Joshi', 3, 22, true),
+(15, 'Akash Shinde', 1, 25, true),
+(16, 'Pooja Pawar', 2, 27, false),
+(17, 'Vikas More', 3, 30, true),
+(18, 'Kiran Chavan', 1, 32, true),
+(19, 'Amit Sharma', 2, 35, false),
+(20, 'Rahul Patil', 3, 37, true),
+(21, 'Priya Deshmukh', 1, 40, false),
+(22, 'Sneha Kulkarni', 2, 42, true),
+(23, 'Rohit Jadhav', 3, 44, false),
+(24, 'Neha Joshi', 1, 45, true),
+(25, 'Akash Shinde', 2, 47, true),
+(26, 'Pooja Pawar', 3, 48, false),
+(27, 'Vikas More', 1, 49, true),
+(28, 'Kiran Chavan', 2, 50, false);
+
+select * from courses;
+select * from students;
+
+SELECT s.id, s.name,s.age,s.isactive,c.course_name
+FROM students AS s
+INNER JOIN courses AS c
+ON s.course_id=c.id 
+order by s.id;
+
+SELECT s.id, s.name,s.age,s.isactive,c.course_name
+FROM students AS s
+INNER JOIN courses AS c
+ON s.course_id=c.id 
+where c.course_name='python' and isactive=true;
+
+SELECT s.name,c.course_name
+from students s
+LEFT JOIN courses c
+ON s.course_id=	c.id;
+
+select * from students;
+
+SELECT
+    c.course_name,
+    s.name
+FROM students s
+RIGHT JOIN courses c
+    ON s.course_id = c.id;
+
+
+SELECT
+    s.name,
+    c.course_name
+FROM students s
+FULL OUTER JOIN courses c
+    ON s.course_id = c.id;
+
+select * from students
+where name='kiko';
+
+CREATE INDEX idx_student_name
+ON students(name);
+
+select * from idx_student_name;
+
+
+-- ACID Properties example :
+
+CREATE TABLE accounts (
+    account_id INTEGER PRIMARY KEY,
+    account_name VARCHAR(100),
+    balance NUMERIC(10,2) CHECK (balance >= 0)
+);
+
+
+INSERT INTO accounts
+(account_id, account_name, balance)
+VALUES
+(1, 'Amit', 10000),
+(2, 'Rahul', 5000);
+
+
+BEGIN;
+
+UPDATE accounts
+SET balance = balance - 2000
+WHERE account_id = 1;
+
+UPDATE accounts
+SET balance = balance + 2000
+WHERE account_id = 2;
+
+COMMIT;
+
+select * from accounts;
+
+ROLLBACK;
+
+
 
