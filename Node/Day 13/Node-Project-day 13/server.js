@@ -67,10 +67,10 @@ app.use("/students", studentRoutes);
 //     next();
 // };
 
-// app.get("/", (req, res) => {
-//     res.send("Welcome to the Home.... :)");
-//     console.log(req.body);
-// });
+app.get("/", (req, res) => {
+    res.send("Welcome to the Home.... :)");
+    console.log(req.body);
+});
 
 // app.get("/students", (req, res) => {
 //     res.send("Students Page");
